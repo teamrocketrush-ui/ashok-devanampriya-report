@@ -221,7 +221,8 @@ body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;background:
       <option value="all">📊 All Months — Combined View</option>
       <option value="jul">📅 July 2026 (Jul 1 – Jul 31)</option>
       <option value="aug">📅 August 2026 (Aug 1 – Aug 31)</option>
-    <option value="sep" selected>📅 September 2026 (Sep 1 – Sep 30)</option>
+    <option value="sep">📅 September 2026 (Sep 1 – Sep 30)</option>
+    <option value="oct" selected>📅 October 2026 (Oct 1 – Oct 31)</option>
     </select>
   </div>
 </div>
@@ -242,7 +243,8 @@ body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;background:
         <option value="all">📊 All Months</option>
         <option value="jul">📅 July 2026 (Jul 1 – Jul 31)</option>
       <option value="aug">📅 August 2026 (Aug 1 – Aug 31)</option>
-    <option value="sep" selected>📅 September 2026 (Sep 1 – Sep 30)</option>
+    <option value="sep">📅 September 2026 (Sep 1 – Sep 30)</option>
+    <option value="oct" selected>📅 October 2026 (Oct 1 – Oct 31)</option>
     </select>
     </div>
     <nav class="sidebar-nav">
@@ -280,7 +282,7 @@ body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;background:
         </div>
         <div class="kpi-card">
           <div class="kpi-icon green"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg></div>
-          <div class="kpi-card-body"><div class="kpi-meta">New Followers</div><div class="kpi-value" id="kpiFol">—</div><div class="kpi-footer"><span class="kpi-tag green" id="kpiFolTag">Total: 8,828</span><div class="kpi-spark-wrap"><div class="kpi-spark-label" id="sl3">—</div><canvas id="spark3"></canvas></div></div></div>
+          <div class="kpi-card-body"><div class="kpi-meta">New Followers</div><div class="kpi-value" id="kpiFol">—</div><div class="kpi-footer"><span class="kpi-tag green" id="kpiFolTag">Total: 9,112</span><div class="kpi-spark-wrap"><div class="kpi-spark-label" id="sl3">—</div><canvas id="spark3"></canvas></div></div></div>
         </div>
       </div>
     </div>
@@ -289,8 +291,8 @@ body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;background:
       <div class="hb-top">
         <div class="hb-left">
           <div class="hb-eyebrow">Total Followers</div>
-          <div class="hb-number">8,828</div>
-          <div class="hb-sub">As of <span id="followersAsOf">Sep 30, 2026</span></div>
+          <div class="hb-number">9,112</div>
+          <div class="hb-sub">As of <span id="followersAsOf">Oct 31, 2026</span></div>
         </div>
         <div class="hb-stats">
           <div class="hb-stat"><div class="hb-stat-label">Impressions</div><div class="hb-stat-val" id="bImp">—</div><div class="hb-stat-sub" id="bImpS">—</div></div>
@@ -346,6 +348,29 @@ body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;background:
 // DATA — injected by Claude when building
 // ═══════════════════════════════════════
 const MONTHS = {
+  oct: {
+    label: "October 2026",
+    range: "Oct 1 – Oct 31, 2026",
+    labels: ["10/1", "10/2", "10/3", "10/4", "10/5", "10/6", "10/7", "10/8", "10/9", "10/10", "10/11", "10/12", "10/13", "10/14", "10/15", "10/16", "10/17", "10/18", "10/19", "10/20", "10/21", "10/22", "10/23", "10/24", "10/25", "10/26", "10/27", "10/28", "10/29", "10/30", "10/31"],
+    impressions: [409, 490, 583, 402, 12703, 1615, 1127, 650, 1014, 1916, 3328, 40127, 2311, 1247, 738, 1051, 516, 425, 1696, 538, 1212, 442, 968, 600, 317, 60755, 1247, 1708, 668, 1089, 4997],
+    engagements: [9, 5, 5, 1, 55, 18, 38, 6, 30, 20, 31, 145, 17, 29, 6, 22, 2, 3, 35, 1, 21, 6, 17, 9, 1, 105, 10, 29, 6, 9, 29],
+    followers: [4, 3, 7, 6, 18, 39, 25, 29, 12, 12, 9, 71, 7, 10, 8, 17, 1, 4, 6, 5, 7, 10, 6, 4, 1, 43, 6, 6, 2, 4, 15],
+    totalImp: 146889, totalEng: 720, totalFol: 397,
+    peakDay: "Oct 26", peakVal: "60,755",
+    impTagClass: "neutral", impTagText: "📊 Cooling down",
+    audience: {
+      locations: [{name:"Greater Bengaluru Area",pct:36.0},{name:"Mumbai Metropolitan Region",pct:11.0},{name:"Greater Delhi Area",pct:9.0},{name:"Greater Hyderabad Area",pct:3.0},{name:"Greater Chennai Area",pct:2.0}],
+      seniority: [{name:"Senior",pct:34.0,color:"#6366F1"},{name:"Entry",pct:12.0,color:"#10B981"},{name:"Director",pct:11.0,color:"#F59E0B"},{name:"Owner",pct:9.0,color:"#EF4444"},{name:"CXO",pct:7.0,color:"#8B5CF6"}],
+      industries: [{name:"Financial Services",pct:20.0},{name:"IT Services and IT Consulting",pct:17.0},{name:"Software Development",pct:11.0},{name:"Technology, Information and Internet",pct:4.0},{name:"Business Consulting and Services",pct:3.0}]
+    },
+    posts: [
+      {title:"LinkedIn Post · Oct 26, 2026",date:"Oct 26, 2026",imp:"62,565",badge:"green",url:"https://www.linkedin.com/posts/ashokdevanampriya_mukesh-ambanis-30213-crore-jio-ipo-was-share-7520324421761257472-nGUZ"},
+      {title:"LinkedIn Post · Oct 12, 2026",date:"Oct 12, 2026",imp:"41,953",badge:"indigo",url:"https://www.linkedin.com/posts/ashokdevanampriya_your-2-crore-house-might-be-the-reason-you-share-7515278670815526912-T9oF"},
+      {title:"LinkedIn Post · Oct 5, 2026",date:"Oct 5, 2026",imp:"14,849",badge:"indigo",url:"https://www.linkedin.com/posts/ashokdevanampriya_sonu-nigam-made-37-crore-without-singing-share-7512728744701177856--Oz1"},
+      {title:"LinkedIn Post · Oct 9, 2026",date:"Oct 9, 2026",imp:"7,493",badge:"indigo",url:"https://www.linkedin.com/posts/ashokdevanampriya_a-market-crash-can-cut-your-portfolio-by-share-7514195134532517888-eeDj"},
+      {title:"LinkedIn Post · Oct 30, 2026",date:"Oct 30, 2026",imp:"5,654",badge:"indigo",url:"https://www.linkedin.com/posts/ashokdevanampriya_leaving-your-child-100-crore-is-useless-share-7520325980024967168-dYTL"}
+    ]
+  },
   sep: {
     label: "September 2026",
     range: "Sep 1 – Sep 30, 2026",
@@ -416,7 +441,7 @@ const MONTHS = {
     ]
   }
 };
-const DEFAULT_MONTH = 'sep';
+const DEFAULT_MONTH = 'oct';
 
 // ═══════════════════════════════════════
 // CHARTS
